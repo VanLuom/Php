@@ -131,7 +131,6 @@ function get_products_by_name($name)
         $product_list[] = array(
             'id' => $row['id'],
             'name' => $row['name'],
-            'description' => $row['description'],
             'price' => $row['price'],
             'img' => $row['img'],
             'categories_id' => $row['categories_id']

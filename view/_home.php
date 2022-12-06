@@ -37,6 +37,12 @@ https://templatemo.com/tm-559-zay-shop
 
     <?php include 'inc/banner.php'; ?>
 
+    <form action="search.php" method="get" class="d-flex">
+                        <input type="text" name="search" class="form-control" placeholder="Search">
+                        <button class="btn btn-outline-dark">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </button>
+                    </form>
 
     <!-- Modal -->
     <div class="modal fade bg-white" id="templatemo_search" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
