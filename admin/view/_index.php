@@ -9,16 +9,16 @@
     <meta name="author" content="" />
     <title>Dashboard - SB Admin</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-   <link rel="stylesheet" href="../../public/admin/css/style.css">
-   <link rel="stylesheet" href="../../public/admin/css/styles.css">
-    <script src="../../public/admin/js/all.js" crossorigin="anonymous"></script>
+   <link rel="stylesheet" href="../public/admin/css/style.css">
+   <link rel="stylesheet" href="../public/admin/css/styles.css">
+    <script src="../public/admin/js/all.js" crossorigin="anonymous"></script>
 
 </head>
 <body class="sb-nav-fixed">
    
-    <?php include_once '../view/inc/_navbar.php' ?>
+    <?php include_once './view/inc/_navbar.php' ?>
     <div id="layoutSidenav">
-        <?php include_once '../view/inc/_sideleft.php' ?>
+        <?php include_once './view/inc/_sideleft.php' ?>
         <div id="layoutSidenav_content">
             <main>
                 <div class="container-fluid px-4">
@@ -139,13 +139,13 @@
             </footer>
         </div>
     </div>
-    <script src="../../public/admin/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
-    <script src=".././public/admin/js/scripts.js"></script>
-    <script src="./public/admin/Chart.min.js" crossorigin="anonymous"></script>
+    <script src="../public/admin/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+    <script src="../public/admin/js/scripts.js"></script>
+    <script src="../public/admin/Chart.min.js" crossorigin="anonymous"></script>
     <script src="assets/demo/chart-area-demo.js"></script>
     <script src="assets/demo/chart-bar-demo.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/simple-datatables@latest" crossorigin="anonymous"></script>
-    <script src="./public/admin/js/datatables-simple-demo.js"></script>
+    <script src="../public/admin/js/datatables-simple-demo.js"></script>
 </body>
 
 </html>

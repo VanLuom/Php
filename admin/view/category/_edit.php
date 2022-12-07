@@ -11,7 +11,7 @@
        <link rel="stylesheet" href="../../public/admin/css/styles.css">
        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-       <script src="../.  ./public/admin/js/all.js " crossorigin="anonymous"></script>
+       <script src="../../public/admin/js/all.js " crossorigin="anonymous"></script>
     </head>
     <body class="sb-nav-fixed">
        <?php include_once '../view/inc/_navbar.php' ?>

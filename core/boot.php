@@ -1,6 +1,6 @@
 <?php
 session_start();
-define('BASE_URL', 'http://localhost/doAn');
+define('BASE_URL', 'http://localhost/shopweb');
 
 require_once 'auth.php';
 require_once 'product_db.php';
