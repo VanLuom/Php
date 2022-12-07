@@ -58,52 +58,57 @@ https://templatemo.com/tm-559-zay-shop
                                         </tr>
                                     </thead>
                                     <tr>
-                                        <?php $cart_list = get_cart(); ?>
-                                        <?php foreach ($cart_list as $order_detail) {; ?>
+                                        <?php if (!empty($_SESSION['cart'])) { ?>
+                                            <?php foreach ($_SESSION['cart'] as $cart) { ?>
+                                                <?php $cart_list = get_cart(); ?>
+                                                <?php foreach ($cart_list as $order_detail) {; ?>
 
-                                            <tbody>
-                                                <tr>
-                                                    <td class="shoping-cart-item">
-                                                        <img src="<?php echo $order_detail['img']; ?>" alt="">
-                                                        <h5><?php echo $order_detail['name']; ?></h5>
-                                                    </td>
-                                                    <td class="shoping-cart-price">
-                                                        <?php echo $order_detail['price']; ?>
-                                                    </td>
-                                                    <td class="shoping-cart-quantity">
-                                                        <div class="quantity" style="display: flex; justify-content: center;">
-                                                            <form action="cart.php" method="post">
-                                                                <input type="hidden" name="action" value="update">
-                                                                <input type="hidden" name="value" value="-1">
-                                                                <input type="hidden" name="productId" value="<?php echo $order_detail['product_id']; ?>">
-                                                                <button class="dec">-</button>
-                                                            </form>
-                                                            <?php echo $order_detail['quantity']; ?>
-                                                            <form action="cart.php" method="post">
-                                                                <input type="hidden" name="action" value="update">
-                                                                <input type="hidden" name="value" value="1">
-                                                                <input type="hidden" name="productId" value="<?php echo $order_detail['product_id']; ?>">
-                                                                <button class="inc">+</button>
-                                                            </form>
-                                                        </div>
-                                                    </td>
-                                                    <td class="shoping-cart-total">
-                                                        "$<?php echo total_cart(); ?>"
-                                                    </td>
-                                                    <td class="shoping-cart-item-close">
-                                                        <form action="cart.php" method="POST">
-                                                            <input type="hidden" name="action" value="delete">
-                                                            <input type="hidden" name="productId" value="<?php echo $order_detail['product_id']; ?>">
-                                                            <button tyle="sumit" class="fa-solid fa-xmark">
+                                                    <tbody>
+                                                        <tr>
+                                                            <td class="shoping-cart-item">
+                                                                <img src="<?php echo $order_detail['img']; ?>" alt="">
+                                                                <h5><?php echo $order_detail['name']; ?></h5>
+                                                            </td>
+                                                            <td class="shoping-cart-price">
+                                                                <?php echo $order_detail['price']; ?>
+                                                            </td>
+                                                            <td class="shoping-cart-quantity">
+                                                                <div class="quantity" style="display: flex; justify-content: center;">
+                                                                    <form action="cart.php" method="post">
+                                                                        <input type="hidden" name="action" value="update">
+                                                                        <input type="hidden" name="value" value="-1">
+                                                                        <input type="hidden" name="productId" value="<?php echo $order_detail['product_id']; ?>">
+                                                                        <button class="dec">-</button>
+                                                                    </form>
+                                                                    <?php echo $order_detail['quantity']; ?>
+                                                                    <form action="cart.php" method="post">
+                                                                        <input type="hidden" name="action" value="update">
+                                                                        <input type="hidden" name="value" value="1">
+                                                                        <input type="hidden" name="productId" value="<?php echo $order_detail['product_id']; ?>">
+                                                                        <button class="inc">+</button>
+                                                                    </form>
+                                                                </div>
+                                                            </td>
+                                                            <td class="shoping-cart-total">
+                                                                "$<?php echo total_cart(); ?>"
+                                                            </td>
+                                                            <td class="shoping-cart-item-close">
+                                                                <form action="cart.php" method="POST">
+                                                                    <input type="hidden" name="action" value="delete">
+                                                                    <input type="hidden" name="productId" value="<?php echo $order_detail['product_id']; ?>">
+                                                                    <button tyle="sumit" class="fa-solid fa-xmark">
 
 
-                                                            </button>
-                                                        </form>
-                                                    </td>
-                                                </tr>
-                                            </tbody>
+                                                                    </button>
+                                                                </form>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
 
+                                                <?php } ?>
+                                            <?php } ?>
                                         <?php } ?>
+
                                     </tr>
                             </div>
 
